@@ -55,7 +55,7 @@
 					:class="open ? 'block' : 'hidden' "
 				>
 					<div
-						class="flex flex-row justify-between py-6 md:py-0 md:flex md:-mx-4 md:flex-row md:items-center"
+						class="flex flex-row justify-between pt-6 md:py-0 md:flex md:mx-4 md:flex-row md:items-center"
 					>
 						<a
 							href="https://www.linkedin.com/in/teal-ewer/"
@@ -96,7 +96,10 @@
 			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
 		>
 			<section class="py-8 px-4 sm:px-6 bg-gray-100 snap-start pt-8">
-				<div class="wrapper justify-center items-center" style="height: 85vh">
+				<div
+					class="wrapper justify-center items-center"
+					style="min-height: 85vh"
+				>
 					<div
 						id="home"
 						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
@@ -132,7 +135,10 @@
 				</div>
 			</section>
 			<section class="py-16 px-4 sm:px-6 bg-blue-50 snap-start">
-				<div class="wrapper justify-center items-center" style="height: 85vh">
+				<div
+					class="wrapper justify-center items-center"
+					style="min-height: 85vh"
+				>
 					<div
 						id="about"
 						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
@@ -140,7 +146,7 @@
 						<img
 							src="images/geom-14.png"
 							alt="Analytics Illustration"
-							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
 							x-intersect="$el.classList.add('scale')"
 						/>
 						<div
@@ -166,7 +172,10 @@
 				</div>
 			</section>
 			<section class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start">
-				<div class="wrapper justify-center items-center" style="height: 85vh">
+				<div
+					class="wrapper justify-center items-center"
+					style="min-height: 85vh"
+				>
 					<div
 						id="skills"
 						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
@@ -200,7 +209,10 @@
 				</div>
 			</section>
 			<section class="py-16 px-4 sm:px-6 bg-red-50 snap-start">
-				<div class="wrapper justify-center items-center" style="height: 85vh">
+				<div
+					class="wrapper justify-center items-center"
+					style="min-height: 85vh"
+				>
 					<div
 						id="portfolio"
 						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
@@ -234,17 +246,14 @@
 				</div>
 			</section>
 			<section class="py-16 px-4 sm:px-6 bg-green-50 snap-start">
-				<div class="wrapper justify-center items-center" style="height: 85vh">
+				<div
+					class="wrapper justify-center items-center"
+					style="min-height: 85vh"
+				>
 					<div
 						id="contact"
 						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
 					>
-						<img
-							src="images/geom-archiving.png"
-							alt="Analytics Illustration"
-							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
-							x-intersect="$el.classList.add('scale')"
-						/>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
@@ -264,6 +273,12 @@
 								and a determination for solving complex problems to any team.
 							</p>
 						</div>
+						<img
+							src="images/geom-archiving.png"
+							alt="Analytics Illustration"
+							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							x-intersect="$el.classList.add('scale')"
+						/>
 					</div>
 				</div>
 			</section>
