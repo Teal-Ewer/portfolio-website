@@ -55,62 +55,52 @@
 					:class="open ? 'block' : 'hidden' "
 				>
 					<div
-						class="flex flex-col items-start text-gray-600 text-lg font-medium capitalize dark:text-gray-300 md:flex md:px-16 md:-mx-4 md:flex-row md:items-center"
+						class="flex flex-row justify-between py-6 md:py-0 md:flex md:-mx-4 md:flex-row md:items-center"
 					>
 						<a
-							href="#about"
-							class="mt-2 transition-all duration-200 transform md:mt-0 md:mx-4 hover:text-gray-900 dark:hover:text-gray-200 border-b-2 border-opacity-0 hover:border-cyan-800 hover:border-opacity-100"
+							href="https://www.linkedin.com/in/teal-ewer/"
+							class="mx-4"
+							target="_blank"
 							@click="open = false"
-							>about</a
-						>
+							><img
+								src="https://img.icons8.com/ios-glyphs/30/005666/linkedin.png"
+						/></a>
 						<a
-							href="#skills"
-							class="mt-2 transition-all duration-200 transform md:mt-0 md:mx-4 hover:text-gray-900 dark:hover:text-gray-200 border-b-2 border-opacity-0 hover:border-cyan-800 hover:border-opacity-100"
+							href="https://github.com/Teal-Ewer"
+							class="mx-4"
+							target="_blank"
 							@click="open = false"
-							>skills</a
-						>
+							><img
+								src="https://img.icons8.com/ios-glyphs/30/005666/github.png"
+						/></a>
 						<a
-							href="#portfolio"
-							class="mt-2 transition-all duration-200 transform md:mt-0 md:mx-4 hover:text-gray-900 dark:hover:text-gray-200 border-b-2 border-opacity-0 hover:border-cyan-800 hover:border-opacity-100"
+							href="mailto:tealewer@gmail.com"
+							class="mx-4"
 							@click="open = false"
-							>portfolio</a
-						>
+							><img
+								src="https://img.icons8.com/ios-glyphs/30/005666/new-post.png"
+						/></a>
 						<a
-							href="#contact"
-							class="mt-2 transition-all duration-200 transform md:mt-0 md:mx-4 hover:text-gray-900 dark:hover:text-gray-200 border-b-2 border-opacity-0 hover:border-cyan-800 hover:border-opacity-100"
+							href="link-to-my-resume-here"
+							class="mx-4"
 							@click="open = false"
-							>contact</a
-						>
-						<button
-							class="mt-3 md:mt-0 md:mx-4 flex items-center px-2 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-primary rounded-md hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
-						>
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								class="w-6 h-6 mx-1"
-								fill="none"
-								viewBox="0 0 24 24"
-								stroke="currentColor"
-							>
-								<path
-									stroke-linecap="round"
-									stroke-linejoin="round"
-									stroke-width="1"
-									d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
-								/>
-							</svg>
-							<span class="mx-1">Resume</span>
-						</button>
+							download
+							download="filename"
+							><img src="https://img.icons8.com/ios/30/005666/open-resume.png"
+						/></a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<main
 			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
-			id="home"
 		>
 			<section class="py-8 px-4 sm:px-6 bg-gray-100 snap-start pt-8">
 				<div class="wrapper justify-center items-center" style="height: 85vh">
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6">
+					<div
+						id="home"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+					>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
@@ -141,9 +131,12 @@
 					</div>
 				</div>
 			</section>
-			<section id="about" class="py-16 px-4 sm:px-6 bg-blue-50 snap-start">
+			<section class="py-16 px-4 sm:px-6 bg-blue-50 snap-start">
 				<div class="wrapper justify-center items-center" style="height: 85vh">
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6">
+					<div
+						id="about"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+					>
 						<img
 							src="images/geom-14.png"
 							alt="Analytics Illustration"
@@ -172,9 +165,12 @@
 					</div>
 				</div>
 			</section>
-			<section id="skills" class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start">
+			<section class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start">
 				<div class="wrapper justify-center items-center" style="height: 85vh">
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6">
+					<div
+						id="skills"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+					>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
@@ -203,9 +199,12 @@
 					</div>
 				</div>
 			</section>
-			<section id="portfolio" class="py-16 px-4 sm:px-6 bg-gray-200 snap-start">
+			<section class="py-16 px-4 sm:px-6 bg-red-50 snap-start">
 				<div class="wrapper justify-center items-center" style="height: 85vh">
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6">
+					<div
+						id="portfolio"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+					>
 						<img
 							src="images/geom-archiving.png"
 							alt="Analytics Illustration"
@@ -234,9 +233,12 @@
 					</div>
 				</div>
 			</section>
-			<section id="contact" class="py-16 px-4 sm:px-6 bg-green-50 snap-start">
+			<section class="py-16 px-4 sm:px-6 bg-green-50 snap-start">
 				<div class="wrapper justify-center items-center" style="height: 85vh">
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6">
+					<div
+						id="contact"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+					>
 						<img
 							src="images/geom-archiving.png"
 							alt="Analytics Illustration"
