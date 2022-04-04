@@ -4,7 +4,7 @@
 
 @layer components {
 	.wrapper {
-		@apply max-w-6xl mx-auto;
+		@apply max-w-6xl mx-auto my-auto;
 	}
 	.btn {
 		@apply inline-block bg-primary text-white rounded-full font-semibold;
@@ -31,6 +31,19 @@
 	.fadeInUp {
 		animation: fadeInUp 1.25s cubic-bezier(0, 0, 0.2, 1);
 	}
+	@keyframes fadeInLeft {
+		from {
+			opacity: 0;
+			transform: translateX(-25%);
+		}
+		to {
+			opacity: 1;
+			transform: translateX(0)
+		}
+	}
+	.fadeInLeft {
+		animation: fadeInLeft 1.25s cubic-bezier(0, 0, 0.2, 1);
+	}
 	@keyframes scale {
 		from {
 			opacity: 0;
@@ -55,5 +68,8 @@
 	}
 	.snap-start {
 		scroll-snap-align: start;
+	}
+	.scroll-padding {
+		scroll-padding-top: 40px;
 	}
 }

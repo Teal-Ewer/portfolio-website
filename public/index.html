@@ -29,8 +29,8 @@
 				<div class="flex items-center justify-between">
 					<div>
 						<a
-							class="text-2xl font-bold text-primary transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-600 dark:hover:text-gray-300"
 							href="#home"
+							class="text-2xl font-bold text-primary transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-600 dark:hover:text-gray-300"
 							>Teal W. Ewer | Developer</a
 						>
 					</div>
@@ -81,10 +81,10 @@
 								src="https://img.icons8.com/ios-glyphs/30/005666/new-post.png"
 						/></a>
 						<a
-							href="link-to-my-resume-here"
+							href="./resume/Teal_Ewer_Resume.pdf"
 							class="mx-4"
 							@click="open = false"
-							download
+							download="Teal_Ewer_Resume"
 							download="filename"
 							><img src="https://img.icons8.com/ios/30/005666/open-resume.png"
 						/></a>
@@ -95,15 +95,12 @@
 		<main
 			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
 		>
-			<section class="py-8 px-4 sm:px-6 bg-gray-100 snap-start pt-8">
+			<section id="home" class="py-8 px-4 sm:px-6 bg-gray-100 snap-start scroll-padding">
 				<div
-					class="wrapper justify-center items-center"
+					class="wrapper flex justify-center items-center"
 					style="min-height: 85vh"
 				>
-					<div
-						id="home"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
-					>
+					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full">
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
@@ -134,14 +131,15 @@
 					</div>
 				</div>
 			</section>
-			<section class="py-16 px-4 sm:px-6 bg-blue-50 snap-start">
+
+			<section class="py-16 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding">
 				<div
-					class="wrapper justify-center items-center"
+					class="wrapper flex justify-center items-center"
 					style="min-height: 85vh"
 				>
 					<div
 						id="about"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
 					>
 						<img
 							src="images/geom-14.png"
@@ -171,27 +169,28 @@
 					</div>
 				</div>
 			</section>
-			<section class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start">
+
+			<section class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding">
 				<div
-					class="wrapper justify-center items-center"
+					class="wrapper flex justify-center items-center"
 					style="min-height: 85vh"
 				>
 					<div
 						id="skills"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
 					>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
 							<h2
 								class="text-3xl sm:text-4xl font-bold"
-								x-intersect="$el.classList.add('fadeInUp')"
+								x-intersect="$el.classList.add('fadeInLeft')"
 							>
 								Skills
 							</h2>
 							<p
 								class="mt-6 leading-10 text-xl text-left"
-								x-intersect="$el.classList.add('fadeInUp')"
+								x-intersect="$el.classList.add('fadeInLeft')"
 							>
 								A software engineer with a flair for elegance and precision
 								shaped by over a decade of experience as a symphony trumpet
@@ -208,14 +207,15 @@
 					</div>
 				</div>
 			</section>
-			<section class="py-16 px-4 sm:px-6 bg-red-50 snap-start">
+
+			<section class="py-16 px-4 sm:px-6 bg-red-50 snap-start scroll-padding">
 				<div
-					class="wrapper justify-center items-center"
+					class="wrapper flex justify-center items-center"
 					style="min-height: 85vh"
 				>
 					<div
 						id="portfolio"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
 					>
 						<img
 							src="images/geom-archiving.png"
@@ -245,14 +245,15 @@
 					</div>
 				</div>
 			</section>
-			<section class="py-16 px-4 sm:px-6 bg-green-50 snap-start">
+
+			<section class="py-16 px-4 sm:px-6 bg-green-50 snap-start scroll-padding">
 				<div
-					class="wrapper justify-center items-center"
+					class="wrapper flex justify-center items-center"
 					style="min-height: 85vh"
 				>
 					<div
 						id="contact"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-5/6"
+						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
 					>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
@@ -282,6 +283,7 @@
 					</div>
 				</div>
 			</section>
+
 		</main>
 	</body>
 </html>
