@@ -22,7 +22,7 @@
 		<nav
 			x-cloak
 			@click.outside="open = false"
-			class="bg-white shadow dark:bg-primary sticky top-0 z-50"
+			class="bg-white shadow sticky top-0 z-50"
 		>
 			<div
 				class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center"
@@ -31,7 +31,7 @@
 					<div>
 						<a
 							href="#home"
-							class="text-2xl font-bold text-primary transition-colors duration-200 transform dark:text-white lg:text-3xl hover:text-gray-600 dark:hover:text-gray-300"
+							class="text-3xl font-bold text-primary transition-colors duration-200 transform hover:text-teal-800"
 							>Teal W. Ewer | Developer</a
 						>
 					</div>
@@ -39,7 +39,7 @@
 						<button
 							@click="open = !open"
 							type="button"
-							class="text-gray-500 dark:text-gray-200 hover:text-gray-600 dark:hover:text-gray-400 focus:outline-none focus:text-gray-600 dark:focus:text-gray-400"
+							class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
 							aria-label="toggle menu"
 						>
 							<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -64,7 +64,7 @@
 							target="_blank"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/ffffff/linkedin.png"
+								src="https://img.icons8.com/ios-glyphs/90/005666/linkedin.png"
 						/></a>
 						<a
 							href="https://github.com/Teal-Ewer"
@@ -72,28 +72,29 @@
 							target="_blank"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/ffffff/github.png"
+								src="https://img.icons8.com/ios-glyphs/90/005666/github.png"
 						/></a>
 						<a
 							href="mailto:tealewer@gmail.com"
 							class="mx-4 w-8"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/ffffff/new-post.png"
+								src="https://img.icons8.com/ios-glyphs/90/005666/new-post.png"
 						/></a>
 						<a
 							href="./resume/Teal_Ewer_Resume.pdf"
 							class="mx-4 w-8"
 							@click="open = false"
 							download="Teal_Ewer_Resume"
-							><img src="https://img.icons8.com/ios/90/ffffff/open-resume.png"
+							><img src="https://img.icons8.com/ios/90/005666/open-resume.png"
 						/></a>
 					</div>
 				</div>
 			</div>
 		</nav>
 		<main
-			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
+			class="relative overflow-y-scroll overflow-x-hidden snap snap-y snap-mandatory"
+			style="max-height: calc(100vh - 68px)"
 		>
 			<section id="home" class="py-8 px-4 sm:px-6 bg-teal-50 snap-start">
 				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
@@ -127,15 +128,15 @@
 				</div>
 			</section>
 
-			<section class="py-8 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding">
+			<section
+				id="about"
+				class="py-8 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding"
+			>
 				<div
 					class="mt-0 md:mt-8 wrapper flex justify-center"
 					style="min-height: 100vh"
 				>
-					<div
-						id="about"
-						class="md:grid md:grid-cols-12 md:items-center h-full"
-					>
+					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<img
 							src="images/who_are_you.png"
 							alt="Analytics Illustration"
@@ -165,64 +166,15 @@
 				</div>
 			</section>
 
-			<section class="py-8 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding">
-				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
-					<div
-						id="skills"
-						class="md:grid md:grid-cols-12 md:items-center h-full"
-					>
-						<div class="text-center items-center md:col-span-6 lg:col-span-5">
-							<h2
-								class="text-3xl sm:text-4xl font-bold"
-								x-intersect="$el.classList.add('fadeInLeft')"
-							>
-								Skills
-							</h2>
-							<table
-								class="mt-4 table-fixed text-left border-2 border-gray-700 rounded-lg"
-								x-intersect="$el.classList.add('fadeInLeft')"
-							>
-								<tbody class="p-4">
-									<tr class="p-4">
-										<td class="p-4 font-semibold">Languages:</td>
-										<td class="p-4">JavaScript, Python, Postgres, HTML, CSS</td>
-									</tr>
-									<tr class="p-4">
-										<td class="p-4 font-semibold">Frameworks:</td>
-										<td class="p-4">Express, React</td>
-									</tr>
-									<tr class="p-4">
-										<td class="p-4 font-semibold">Databases:</td>
-										<td class="p-4">MongoDB</td>
-									</tr>
-									<tr class="p-4">
-										<td class="p-4 font-semibold">Libraries:</td>
-										<td class="p-4">
-											Git, GitHub, Bulma, TailwindCSS, Mongoose, Bootstrap
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-						<img
-							src="images/mysterious_and_important.png"
-							alt="Analytics Illustration"
-							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
-							x-intersect="$el.classList.add('scale')"
-						/>
-					</div>
-				</div>
-			</section>
-
-			<section class="py-8 px-4 sm:px-6 bg-stone-200 snap-start scroll-padding">
+			<section
+				id="projects"
+				class="py-8 px-4 sm:px-6 bg-amber-100 snap-start scroll-padding"
+			>
 				<div
 					class="mt-0 md:mt-8 wrapper flex justify-center"
 					style="min-height: 100vh"
 				>
-					<div
-						id="portfolio"
-						class="md:grid md:grid-cols-12 md:items-center h-full"
-					>
+					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<img
 							src="images/geom-archiving.png"
 							alt="Analytics Illustration"
@@ -252,12 +204,61 @@
 				</div>
 			</section>
 
-			<section class="py-8 px-4 sm:px-6 bg-red-50 snap-start scroll-padding">
+			<section
+				id="skills"
+				class="py-8 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding"
+			>
 				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
-					<div
-						id="contact"
-						class="md:grid md:grid-cols-12 md:items-center h-full"
-					>
+					<div class="md:grid md:grid-cols-12 md:items-center h-full">
+						<div class="text-center items-center md:col-span-6 lg:col-span-5">
+							<h2
+								class="text-3xl sm:text-4xl font-bold"
+								x-intersect="$el.classList.add('fadeInLeft')"
+							>
+								Skills
+							</h2>
+							<table
+								class="mt-4 table-fixed text-left border-2 border-gray-700 rounded-lg border-separate"
+								x-intersect="$el.classList.add('fadeInLeft')"
+							>
+								<tbody class="p-4">
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Languages:</td>
+										<td class="p-4">JavaScript, Python, SQL, HTML, CSS</td>
+									</tr>
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Frameworks:</td>
+										<td class="p-4">Node, Express, React</td>
+									</tr>
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Databases:</td>
+										<td class="p-4">MongoDB</td>
+									</tr>
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Libraries:</td>
+										<td class="p-4">
+											Git, GitHub, Bulma, TailwindCSS, Mongoose, Bootstrap, JWT
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<img
+							src="images/mysterious_and_important.png"
+							alt="Analytics Illustration"
+							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							x-intersect="$el.classList.add('scale')"
+						/>
+					</div>
+				</div>
+			</section>
+
+			<section
+				id="contact"
+				class="py-8 px-4 sm:px-6 bg-red-100 snap-start scroll-padding"
+			>
+				<div class="mt-8 wrapper flex justify-center" style="min-height: calc(100vh - 60px)">
+					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
