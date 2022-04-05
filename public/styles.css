@@ -622,6 +622,8 @@ video {
 .wrapper {
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
 	max-width: 72rem;
 }
 .relative {
@@ -649,6 +651,9 @@ video {
 }
 .mt-6 {
 	margin-top: 1.5rem;
+}
+.mt-0 {
+	margin-top: 0px;
 }
 .block {
 	display: block;
@@ -723,6 +728,22 @@ video {
 	--tw-bg-opacity: 1;
 	background-color: rgba(236, 253, 245, var(--tw-bg-opacity));
 }
+.bg-teal-100 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(204, 251, 241, var(--tw-bg-opacity));
+}
+.bg-teal-50 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(240, 253, 250, var(--tw-bg-opacity));
+}
+.bg-green-100 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(209, 250, 229, var(--tw-bg-opacity));
+}
+.bg-green-200 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(167, 243, 208, var(--tw-bg-opacity));
+}
 .fill-current {
 	fill: currentColor;
 }
@@ -741,10 +762,6 @@ video {
 .px-4 {
 	padding-left: 1rem;
 	padding-right: 1rem;
-}
-.py-16 {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
 }
 .pt-6 {
 	padding-top: 1.5rem;
@@ -811,8 +828,16 @@ video {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
+.transition-all {
+	transition-property: all;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
 .duration-200 {
 	transition-duration: 200ms;
+}
+.duration-1000 {
+	transition-duration: 1000ms;
 }
 @-webkit-keyframes fadeInUp {
 		from {
@@ -900,13 +925,17 @@ video {
 		scroll-snap-align: start;
 	}
 .scroll-padding {
-		scroll-padding-top: 40px;
+		scroll-padding: 50px;
 	}
 
 @layer components {
 	.wrapper {
 		margin-left: auto;
 		margin-right: auto;
+	}
+	.wrapper {
+		margin-top: auto;
+		margin-bottom: auto;
 	}
 	.wrapper {
 		max-width: 72rem;
@@ -1033,7 +1062,7 @@ video {
 		scroll-snap-align: start;
 	}
 	.scroll-padding {
-		scroll-padding-top: 40px;
+		scroll-padding: 50px;
 	}
 }
 
@@ -1084,6 +1113,10 @@ video {
 		margin-left: auto;
 	}
 
+	.md\:mt-8 {
+		margin-top: 2rem;
+	}
+
 	.md\:flex {
 		display: flex;
 	}
@@ -1114,10 +1147,6 @@ video {
 
 	.md\:justify-between {
 		justify-content: space-between;
-	}
-
-	.md\:gap-4 {
-		gap: 1rem;
 	}
 
 	.md\:py-0 {

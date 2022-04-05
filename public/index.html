@@ -20,6 +20,7 @@
 		x-data="{ open: false }"
 	>
 		<nav
+			x-cloak
 			@click.outside="open = false"
 			class="bg-white shadow dark:bg-gray-800 sticky top-0 z-50"
 		>
@@ -51,8 +52,8 @@
 					</div>
 				</div>
 				<div
-					class="items-center justify-between md:flex"
-					:class="open ? 'block' : 'hidden' "
+					class="items-center justify-between md:flex transition-all duration-1000"
+					:class="open ? 'block' : 'hidden'"
 				>
 					<div
 						class="flex flex-row justify-between pt-6 md:py-0 md:flex md:mx-4 md:flex-row md:items-center"
@@ -95,14 +96,14 @@
 		<main
 			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
 		>
-			<section id="home" class="py-8 px-4 sm:px-6 bg-gray-100 snap-start scroll-padding">
+			<section id="home" class="py-8 px-4 sm:px-6 bg-teal-50 snap-start scroll-padding">
 				<div
-					class="wrapper flex justify-center items-center"
-					style="min-height: 85vh"
+					class="mt-8 wrapper flex justify-center"
+					style="min-height: 100vh"
 				>
-					<div class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full">
+					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+							class="text-center items-center md:col-span-6 lg:col-span-5"
 						>
 							<h1
 								class="text-4xl text-primary md:text-5xl font-bold"
@@ -132,17 +133,17 @@
 				</div>
 			</section>
 
-			<section class="py-16 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding">
+			<section class="py-8 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding">
 				<div
-					class="wrapper flex justify-center items-center"
-					style="min-height: 85vh"
+					class="mt-0 md:mt-8 wrapper flex justify-center"
+					style="min-height: 100vh"
 				>
 					<div
 						id="about"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
+						class="md:grid md:grid-cols-12 md:items-center h-full"
 					>
 						<img
-							src="images/geom-14.png"
+							src="images/who_are_you.png"
 							alt="Analytics Illustration"
 							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
 							x-intersect="$el.classList.add('scale')"
@@ -170,17 +171,17 @@
 				</div>
 			</section>
 
-			<section class="py-16 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding">
+			<section class="py-8 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding">
 				<div
-					class="wrapper flex justify-center items-center"
-					style="min-height: 85vh"
+					class="mt-8 wrapper flex justify-center"
+					style="min-height: 100vh"
 				>
 					<div
 						id="skills"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
+						class="md:grid md:grid-cols-12 md:items-center h-full"
 					>
 						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+							class="text-center items-center md:col-span-6 lg:col-span-5"
 						>
 							<h2
 								class="text-3xl sm:text-4xl font-bold"
@@ -196,10 +197,11 @@
 								shaped by over a decade of experience as a symphony trumpet
 								player and military musician. I bring an enthusiasm for learning
 								and a determination for solving complex problems to any team.
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum dolor assumenda sed numquam consequatur ut quibusdam facilis ipsa deleniti, quisquam dolorum repellat nisi sapiente iusto impedit eius autem officiis commodi corporis soluta accusamus sint ullam culpa. Pariatur vitae minus debitis molestias provident amet sit, minima, dicta fugiat voluptatum porro.
 							</p>
 						</div>
 						<img
-							src="images/geom-16.png"
+							src="images/mysterious_and_important.png"
 							alt="Analytics Illustration"
 							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
 							x-intersect="$el.classList.add('scale')"
@@ -208,14 +210,14 @@
 				</div>
 			</section>
 
-			<section class="py-16 px-4 sm:px-6 bg-red-50 snap-start scroll-padding">
+			<section class="py-8 px-4 sm:px-6 bg-green-200 snap-start scroll-padding">
 				<div
-					class="wrapper flex justify-center items-center"
-					style="min-height: 85vh"
+					class="mt-0 md:mt-8 wrapper flex justify-center"
+					style="min-height: 100vh"
 				>
 					<div
 						id="portfolio"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
+						class="md:grid md:grid-cols-12 md:items-center h-full"
 					>
 						<img
 							src="images/geom-archiving.png"
@@ -246,14 +248,14 @@
 				</div>
 			</section>
 
-			<section class="py-16 px-4 sm:px-6 bg-green-50 snap-start scroll-padding">
+			<section class="py-8 px-4 sm:px-6 bg-red-50 snap-start scroll-padding">
 				<div
-					class="wrapper flex justify-center items-center"
-					style="min-height: 85vh"
+					class="mt-8 wrapper flex justify-center"
+					style="min-height: 100vh"
 				>
 					<div
 						id="contact"
-						class="md:grid md:grid-cols-12 md:items-center md:gap-4 h-full"
+						class="md:grid md:grid-cols-12 md:items-center h-full"
 					>
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"

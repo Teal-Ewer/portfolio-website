@@ -70,6 +70,6 @@
 		scroll-snap-align: start;
 	}
 	.scroll-padding {
-		scroll-padding-top: 40px;
+		scroll-padding: 50px;
 	}
 }
