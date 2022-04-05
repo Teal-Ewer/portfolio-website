@@ -96,15 +96,13 @@
 		<main
 			class="relative max-h-screen overflow-y-scroll snap snap-y snap-mandatory"
 		>
-			<section id="home" class="py-8 px-4 sm:px-6 bg-teal-50 snap-start scroll-padding">
-				<div
-					class="mt-8 wrapper flex justify-center"
-					style="min-height: 100vh"
-				>
+			<section
+				id="home"
+				class="py-8 px-4 sm:px-6 bg-teal-50 snap-start"
+			>
+				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
-						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5"
-						>
+						<div class="text-center items-center md:col-span-6 lg:col-span-5">
 							<h1
 								class="text-4xl text-primary md:text-5xl font-bold"
 								x-intersect="$el.classList.add('fadeInUp')"
@@ -172,33 +170,38 @@
 			</section>
 
 			<section class="py-8 px-4 sm:px-6 bg-indigo-50 snap-start scroll-padding">
-				<div
-					class="mt-8 wrapper flex justify-center"
-					style="min-height: 100vh"
-				>
+				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
 					<div
 						id="skills"
 						class="md:grid md:grid-cols-12 md:items-center h-full"
 					>
-						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5"
-						>
+						<div class="text-center items-center md:col-span-6 lg:col-span-5">
 							<h2
 								class="text-3xl sm:text-4xl font-bold"
 								x-intersect="$el.classList.add('fadeInLeft')"
 							>
 								Skills
 							</h2>
-							<p
-								class="mt-6 leading-10 text-xl text-left"
-								x-intersect="$el.classList.add('fadeInLeft')"
-							>
-								A software engineer with a flair for elegance and precision
-								shaped by over a decade of experience as a symphony trumpet
-								player and military musician. I bring an enthusiasm for learning
-								and a determination for solving complex problems to any team.
-								Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas rerum dolor assumenda sed numquam consequatur ut quibusdam facilis ipsa deleniti, quisquam dolorum repellat nisi sapiente iusto impedit eius autem officiis commodi corporis soluta accusamus sint ullam culpa. Pariatur vitae minus debitis molestias provident amet sit, minima, dicta fugiat voluptatum porro.
-							</p>
+							<table class="mt-4 table-fixed text-left border-2 border-gray-700 rounded-lg" x-intersect="$el.classList.add('fadeInLeft')">
+								<tbody class="p-4">
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Languages:</td>
+										<td class="p-4">JavaScript, Python, Postgres, HTML, CSS</td>
+									</tr>
+									<tr class="p-4">		
+										<td class="p-4 font-semibold">Frameworks:</td>
+										<td class="p-4">Express, React</td>
+									</tr>
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Databases:</td>
+										<td class="p-4">MongoDB</td>
+									</tr>
+									<tr class="p-4">
+										<td class="p-4 font-semibold">Libraries:</td>
+										<td class="p-4">Git, GitHub, Bulma, TailwindCSS, Mongoose, Bootstrap</td>
+									</tr>
+								</tbody>
+							</table>
 						</div>
 						<img
 							src="images/mysterious_and_important.png"
@@ -232,7 +235,7 @@
 								class="text-3xl sm:text-4xl font-bold"
 								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								Portfolio
+								Projects
 							</h2>
 							<p
 								class="mt-6 leading-10 text-xl text-left"
@@ -249,10 +252,7 @@
 			</section>
 
 			<section class="py-8 px-4 sm:px-6 bg-red-50 snap-start scroll-padding">
-				<div
-					class="mt-8 wrapper flex justify-center"
-					style="min-height: 100vh"
-				>
+				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
 					<div
 						id="contact"
 						class="md:grid md:grid-cols-12 md:items-center h-full"
@@ -285,7 +285,6 @@
 					</div>
 				</div>
 			</section>
-
 		</main>
 	</body>
 </html>
