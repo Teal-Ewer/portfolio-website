@@ -21,7 +21,7 @@
 	>
 		<nav
 			@click.outside="open = false"
-			class="bg-neutral-50 shadow sticky top-0 z-50 dark:bg-zinc-700"
+			class="shadow sticky top-0 z-50 bg-slate-800 text-neutral-100"
 			style="min-height: 68px"
 		>
 			<div
@@ -32,7 +32,7 @@
 						@click="document.querySelector('#home').scrollIntoView({ 
   							behavior: 'smooth' 
 								})"
-						class="text-2xl md:text-3xl font-bold transition-colors duration-200 transform hover:cursor-pointer hover:text-gray-600 dark:text-stone-200"
+						class="text-2xl md:text-3xl font-bold transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300"
 					>
 						Teal W. Ewer | Developer
 					</div>
@@ -40,7 +40,7 @@
 						<button
 							@click="open = !open"
 							type="button"
-							class="text-gray-800 hover:text-gray-500 focus:outline-none focus:text-gray-600 transition-colors"
+							class="text-neutral-100 hover:text-neutral-300  focus:outline-none focus:text-neutral-200 transition-colors"
 							aria-label="toggle menu"
 						>
 							<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -55,6 +55,7 @@
 				<div
 					class="items-center justify-between md:flex transition-all duration-1000"
 					:class="open ? 'block' : 'hidden'"
+					x-transition
 				>
 					<div
 						class="flex flex-row justify-between pt-6 md:py-0 md:flex md:mx-4 md:flex-row md:items-center"
@@ -65,7 +66,7 @@
 							target="_blank"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/1f2937/linkedin.png"
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/linkedin.png"
 						/></a>
 						<a
 							href="https://github.com/Teal-Ewer"
@@ -73,21 +74,21 @@
 							target="_blank"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/1f2937/github.png"
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/github.png"
 						/></a>
 						<a
 							href="mailto:tealewer@gmail.com"
 							class="mx-4 w-8"
 							@click="open = false"
 							><img
-								src="https://img.icons8.com/ios-glyphs/90/1f2937/new-post.png"
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/new-post.png"
 						/></a>
 						<a
 							href="./resume/Teal_Ewer_Resume.pdf"
 							class="mx-4 w-8"
 							@click="open = false"
 							download="Teal_Ewer_Resume"
-							><img src="https://img.icons8.com/ios/90/374151/open-resume.png"
+							><img src="https://img.icons8.com/ios/90/f5f5f5/open-resume.png"
 						/></a>
 					</div>
 				</div>
@@ -97,30 +98,29 @@
 			class="relative overflow-y-scroll snap snap-y snap-mandatory"
 			style="max-height: calc(100vh - 68px)"
 		>
+
 			<section
 				id="home"
-				class="py-8 px-4 sm:px-6 bg-slate-100 dark:bg-neutral-700 snap-start scroll-padding min-h-screen"
+				class="py-8 px-4 sm:px-6 bg-slate-100 dark:bg-gray-800 snap-start scroll-padding"
 			>
-				<div class="mt-8 wrapper flex justify-center">
+				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div class="text-center items-center md:col-span-6 lg:col-span-5">
 							<h1
-								class="text-4xl md:text-5xl font-bold dark:text-stone-200"
+								class="text-4xl md:text-5xl font-bold dark:text-stone-200 text-slate-700"
 								x-intersect="$el.classList.add('fadeInUp')"
 							>
 								Hi, I'm Teal.
 							</h1>
 							<p
-								class="border-l-4 border-primary dark:border-stone-200 mt-8 pl-6 text-2xl leading-10 text-left opacity-0"
+								class="border-l-4 border-slate-700 dark:border-stone-200 mt-8 pl-6 text-2xl leading-10 text-left opacity-0"
 								x-intersect="
 								setTimeout(() => {
 									$el.classList.add('fadeInUp', 'opacity-100')
 								}, 2250)
 								"
 							>
-								Yes, like the
-								<span class="text-primary font-semibold">color!</span> I'm a
-								DC-based software engineer, frenchie dad, and USMC Veteran.
+								Yes, like the color! I'm a DC-based software engineer, frenchie dad, and USMC Veteran.
 							</p>
 						</div>
 						<img
@@ -135,7 +135,7 @@
 
 			<section
 				id="about"
-				class="py-8 px-4 sm:px-6 bg-blue-50 snap-start scroll-padding"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div
 					class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen"
@@ -151,7 +151,7 @@
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
 							<h2
-								class="text-3xl sm:text-4xl font-bold"
+								class="text-3xl sm:text-4xl font-bold text-slate-700"
 								x-intersect="$el.classList.add('fadeInRight')"
 							>
 								Who am I?
@@ -172,13 +172,13 @@
 
 			<section
 				id="projects"
-				class="py-8 px-4 sm:px-6 bg-slate-800 snap-start scroll-padding"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div
 					class="mt-0 md:mt-8 wrapper flex flex-col min-h-screen"
 				>
 					<h2
-						class="text-3xl sm:text-4xl font-bold text-center text-neutral-100"
+						class="text-3xl sm:text-4xl font-bold text-center text-slate-700"
 						x-intersect="$el.classList.add('fadeInUp')"
 					>
 						Projects
@@ -347,17 +347,16 @@
 							>
 								<img
 									class="object-contain object-center w-full h-auto max-w-s"
-									src="images/myLibrary.png"
+									src="images/mutant-games.png"
 									alt="myLibrary home page"
 								/>
 							</a>
 							<div class="text-center px-6 py-3 bg-gray-900">
-								<h1 class="mx-3 text-lg font-semibold text-white">myLibrary</h1>
+								<h1 class="mx-3 text-lg font-semibold text-white">Mutant Games</h1>
 							</div>
 							<div class="px-6 py-4">
 								<p class="py-2 text-gray-700 dark:text-gray-400">
-									A virtual bookshelf with full CRUD capabilities, utilizing
-									Google OAuth 2.0 and the Google Books API.
+									A MERN stack application for creating and joining video game lobbies.
 								</p>
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
@@ -390,7 +389,7 @@
 									</svg>
 									<a
 										class="px-2 text-sm text-blue-700 hover:text-blue-600"
-										href="https://teals-library.herokuapp.com/"
+										href="https://mutant-games.herokuapp.com/"
 										target="_blank"
 										>Check out the deployed app on Heroku</a
 									>
@@ -417,13 +416,13 @@
 
 			<section
 				id="skills"
-				class="py-8 px-4 sm:px-6 bg-slate-50 snap-start scroll-padding"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
-				<div class="mt-8 wrapper flex justify-center" style="min-height: 100vh">
+				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div class="text-center items-center md:col-span-6 lg:col-span-5">
 							<h2
-								class="text-3xl sm:text-4xl font-bold"
+								class="text-3xl sm:text-4xl font-bold text-slate-700"
 								x-intersect="$el.classList.add('fadeInLeft')"
 							>
 								Skills
@@ -432,7 +431,7 @@
 								class="mt-4 table-fixed text-left p-1 border-2 border-gray-700 rounded-xl border-separate shadow-xl"
 								x-intersect="$el.classList.add('fadeInLeft')"
 							>
-								<tbody class="p-4 rounded-lg" style="background-color: #6fc998">
+								<tbody class="p-4 rounded-lg" style="background-color: #e0e3e3">
 									<tr class="p-4">
 										<td class="p-4 font-semibold rounded-tl-lg">Languages:</td>
 										<td class="p-4 rounded-tr-lg">
@@ -469,18 +468,17 @@
 
 			<section
 				id="contact"
-				class="py-8 px-4 sm:px-6 bg-red-100 snap-start scroll-padding"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div
-					class="mt-8 wrapper flex justify-center"
-					style="min-height: calc(100vh - 60px)"
+					class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen"
 				>
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
 							<h2
-								class="text-3xl sm:text-4xl font-bold"
+								class="text-3xl sm:text-4xl font-bold text-slate-700"
 								x-intersect="$el.classList.add('fadeInUp')"
 							>
 								Contact
