@@ -98,4 +98,10 @@
 	.scroll-padding {
 		scroll-padding: 50px;
 	}
+	.scaleUpOnHover { 
+		transition: all .25s ease-in-out; 
+	}
+	.scaleUpOnHover:hover { 
+		transform: scale(1.025); 
+	}
 }
