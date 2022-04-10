@@ -40,7 +40,7 @@
 						<button
 							@click="open = !open"
 							type="button"
-							class="text-neutral-100 hover:text-neutral-300  focus:outline-none focus:text-neutral-200 transition-colors"
+							class="text-neutral-100 hover:text-neutral-300 focus:outline-none focus:text-neutral-200 transition-colors"
 							aria-label="toggle menu"
 						>
 							<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
@@ -94,11 +94,11 @@
 				</div>
 			</div>
 		</nav>
+
 		<main
-			class="relative overflow-y-scroll snap snap-y snap-mandatory"
+			class="relative overflow-y-scroll snap snap-y snap-mandatory overflow-hidden"
 			style="max-height: calc(100vh - 68px)"
 		>
-
 			<section
 				id="home"
 				class="py-8 px-4 sm:px-6 bg-slate-100 dark:bg-gray-800 snap-start scroll-padding"
@@ -120,7 +120,8 @@
 								}, 2250)
 								"
 							>
-								Yes, like the color! I'm a DC-based software engineer, frenchie dad, and USMC Veteran.
+								Yes, like the color! I'm a DC-based software engineer, frenchie
+								dad, and USMC Veteran.
 							</p>
 						</div>
 						<img
@@ -137,13 +138,11 @@
 				id="about"
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
-				<div
-					class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen"
-				>
-					<div class="md:grid md:grid-cols-12 md:items-center h-full">
+				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
+					<div class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse">
 						<img
 							src="images/who_are_you.png"
-							alt="Analytics Illustration"
+							alt="Eye Searching Illustration"
 							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
 							x-intersect="$el.classList.add('scale')"
 						/>
@@ -174,9 +173,7 @@
 				id="projects"
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
-				<div
-					class="mt-0 md:mt-8 wrapper flex flex-col min-h-screen"
-				>
+				<div class="mt-0 md:mt-8 wrapper flex flex-col min-h-screen">
 					<h2
 						class="text-3xl sm:text-4xl font-bold text-center text-slate-700"
 						x-intersect="$el.classList.add('fadeInUp')"
@@ -184,83 +181,7 @@
 						Projects
 					</h2>
 					<div class="flex flex-col lg:flex-row">
-						<!-- card 1 -->
-						<div
-							class="my-8 md:w-96 lg:mx-4 mx-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-xl h-1/2 scaleUpOnHover"
-						>
-							<a
-								href="https://elated-carson-819d6b.netlify.app/"
-								target="_blank"
-								class="focus:border-none"
-							>
-								<img
-									class="object-contain object-center w-full h-auto max-w-s"
-									src="images/poker-homescreen-reduced.png"
-									alt="Poker app home page"
-								/>
-							</a>
-							<div class="text-center px-6 py-3 bg-gray-900">
-								<h1 class="mx-3 text-lg font-semibold text-white">
-									Poker | Push or Fold
-								</h1>
-							</div>
-							<div class="px-6 py-4">
-								<p class="py-2 text-gray-700 dark:text-gray-400">
-									A card based memory game that tests user’s knowledge of
-									preflop poker charts, complete with animations and confetti!
-								</p>
-								<div class="mt-4 text-gray-700 dark:text-gray-200">
-									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
-									<p class="px-2 text-sm">HTML, CSS, JavaScript, Bulma</p>
-								</div>
-								<div
-									class="flex items-center mt-4 text-gray-700 dark:text-gray-200"
-								>
-									<svg
-										xmlns="http://www.w3.org/2000/svg"
-										class="w-5 h-5 mx-1"
-										fill="none"
-										viewBox="0 0 24 24"
-										stroke="currentColor"
-									>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-										/>
-										<path
-											stroke-linecap="round"
-											stroke-linejoin="round"
-											stroke-width="2"
-											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
-										/>
-									</svg>
-									<a
-										class="px-2 text-sm text-blue-700 hover:text-blue-600"
-										href="https://elated-carson-819d6b.netlify.app/"
-										target="_blank"
-										>Check out the deployed app on Netlify</a
-									>
-								</div>
-								<div
-									class="flex flex-row justify-start items-center mt-4 text-gray-700 dark:text-gray-200"
-								>
-									<img
-										style="max-width: 25px"
-										src="https://img.icons8.com/ios-glyphs/90/374151/github.png"
-									/>
-									<a
-										class="px-2 text-sm text-blue-700 hover:text-blue-600"
-										href="https://github.com/Teal-Ewer/poker-push-fold-trainer"
-										target="_blank"
-										>View the code on GitHub</a
-									>
-								</div>
-							</div>
-						</div>
-
-						<!-- card2 -->
+						<!-- card1 -->
 						<div
 							class="my-8 md:w-96 lg:mx-4 mx-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-lg h-1/2 scaleUpOnHover"
 						>
@@ -336,6 +257,82 @@
 							</div>
 						</div>
 
+						<!-- card 2 -->
+						<div
+							class="my-8 md:w-96 lg:mx-4 mx-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-xl h-1/2 scaleUpOnHover"
+						>
+							<a
+								href="https://elated-carson-819d6b.netlify.app/"
+								target="_blank"
+								class="focus:border-none"
+							>
+								<img
+									class="object-contain object-center w-full h-auto max-w-s"
+									src="images/poker-homescreen-reduced.png"
+									alt="Poker app home page"
+								/>
+							</a>
+							<div class="text-center px-6 py-3 bg-gray-900">
+								<h1 class="mx-3 text-lg font-semibold text-white">
+									Poker | Push or Fold
+								</h1>
+							</div>
+							<div class="px-6 py-4">
+								<p class="py-2 text-gray-700 dark:text-gray-400">
+									A card based memory game that tests user’s knowledge of
+									preflop poker charts, complete with animations and confetti!
+								</p>
+								<div class="mt-4 text-gray-700 dark:text-gray-200">
+									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
+									<p class="px-2 text-sm">HTML, CSS, JavaScript, Bulma</p>
+								</div>
+								<div
+									class="flex items-center mt-4 text-gray-700 dark:text-gray-200"
+								>
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										class="w-5 h-5 mx-1"
+										fill="none"
+										viewBox="0 0 24 24"
+										stroke="currentColor"
+									>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+										/>
+										<path
+											stroke-linecap="round"
+											stroke-linejoin="round"
+											stroke-width="2"
+											d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+										/>
+									</svg>
+									<a
+										class="px-2 text-sm text-blue-700 hover:text-blue-600"
+										href="https://elated-carson-819d6b.netlify.app/"
+										target="_blank"
+										>Check out the deployed app on Netlify</a
+									>
+								</div>
+								<div
+									class="flex flex-row justify-start items-center mt-4 text-gray-700 dark:text-gray-200"
+								>
+									<img
+										style="max-width: 25px"
+										src="https://img.icons8.com/ios-glyphs/90/374151/github.png"
+									/>
+									<a
+										class="px-2 text-sm text-blue-700 hover:text-blue-600"
+										href="https://github.com/Teal-Ewer/poker-push-fold-trainer"
+										target="_blank"
+										>View the code on GitHub</a
+									>
+								</div>
+							</div>
+						</div>
+
 						<!-- card3 -->
 						<div
 							class="my-8 md:w-96 lg:mx-4 mx-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-lg h-1/2 scaleUpOnHover"
@@ -352,11 +349,14 @@
 								/>
 							</a>
 							<div class="text-center px-6 py-3 bg-gray-900">
-								<h1 class="mx-3 text-lg font-semibold text-white">Mutant Games</h1>
+								<h1 class="mx-3 text-lg font-semibold text-white">
+									Mutant Games
+								</h1>
 							</div>
 							<div class="px-6 py-4">
 								<p class="py-2 text-gray-700 dark:text-gray-400">
-									A MERN stack application for creating and joining video game lobbies.
+									A full-stack MERN application for creating and joining video game
+									lobbies.
 								</p>
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
@@ -433,13 +433,13 @@
 							>
 								<tbody class="p-4 rounded-lg" style="background-color: #e0e3e3">
 									<tr class="p-4">
-										<td class="p-4 font-semibold rounded-tl-lg">Languages:</td>
+										<td class="p-4 font-semibold rounded-tl-lg">Languages</td>
 										<td class="p-4 rounded-tr-lg">
 											JavaScript, Python, SQL, HTML, CSS, Markdown
 										</td>
 									</tr>
 									<tr class="p-4">
-										<td class="p-4 font-semibold">Frameworks:</td>
+										<td class="p-4 font-semibold">Frameworks</td>
 										<td class="p-4">React, Node.js, Django, Alpine.js</td>
 									</tr>
 									<tr class="p-4">
@@ -447,7 +447,7 @@
 										<td class="p-4">MongoDB, PostgreSQL</td>
 									</tr>
 									<tr class="p-4">
-										<td class="p-4 font-semibold rounded-bl-lg">Tools:</td>
+										<td class="p-4 font-semibold rounded-bl-lg">Tools</td>
 										<td class="p-4 rounded-br-lg">
 											Express, Mongoose, Passport.js, Insomnia, Postman, Google
 											OAuth 2.0, Google Books API, Git, GitHub
@@ -470,9 +470,7 @@
 				id="contact"
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
-				<div
-					class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen"
-				>
+				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
 						<div
 							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
