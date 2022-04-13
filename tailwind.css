@@ -95,6 +95,12 @@
 	.snap-start {
 		scroll-snap-align: start;
 	}
+	.snap-end {
+		scroll-snap-align: end;
+	}
+	.snap-stop {
+		scroll-snap-align: none;
+	}
 	.scroll-padding {
 		scroll-padding: 50px;
 	}
@@ -103,5 +109,11 @@
 	}
 	.scaleUpOnHover:hover { 
 		transform: scale(1.025); 
+	}
+	.scaleUpOnHover2 { 
+		transition: all .25s ease-in-out; 
+	}
+	.scaleUpOnHover2:hover { 
+		transform: scale(1.125); 
 	}
 }

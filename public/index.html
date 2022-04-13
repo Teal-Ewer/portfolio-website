@@ -32,9 +32,9 @@
 						@click="document.querySelector('#home').scrollIntoView({ 
   							behavior: 'smooth' 
 								})"
-						class="text-2xl md:text-3xl font-bold transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300"
+						class="text-2xl md:text-3xl transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300"
 					>
-						Teal W. Ewer | Developer
+						Teal W Ewer | Developer
 					</div>
 					<div class="flex md:hidden">
 						<button
@@ -53,16 +53,15 @@
 					</div>
 				</div>
 				<div
-					class="items-center justify-between md:flex transition-all duration-1000"
+					class="items-center justify-between md:flex"
 					:class="open ? 'block' : 'hidden'"
-					x-transition
 				>
 					<div
 						class="flex flex-row justify-between pt-6 md:py-0 md:flex md:mx-4 md:flex-row md:items-center"
 					>
 						<a
 							href="https://www.linkedin.com/in/teal-ewer/"
-							class="mx-4 w-8"
+							class="mx-4 w-8 scaleUpOnHover2"
 							target="_blank"
 							@click="open = false"
 							><img
@@ -70,7 +69,7 @@
 						/></a>
 						<a
 							href="https://github.com/Teal-Ewer"
-							class="mx-4 w-8"
+							class="mx-4 w-8 scaleUpOnHover2"
 							target="_blank"
 							@click="open = false"
 							><img
@@ -78,14 +77,14 @@
 						/></a>
 						<a
 							href="mailto:tealewer@gmail.com"
-							class="mx-4 w-8"
+							class="mx-4 w-8 scaleUpOnHover2"
 							@click="open = false"
 							><img
 								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/new-post.png"
 						/></a>
 						<a
 							href="./resume/Teal_Ewer_Resume.pdf"
-							class="mx-4 w-8"
+							class="mx-4 w-8 scaleUpOnHover2"
 							@click="open = false"
 							download="Teal_Ewer_Resume"
 							><img src="https://img.icons8.com/ios/90/f5f5f5/open-resume.png"
@@ -105,7 +104,7 @@
 			>
 				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
-						<div class="text-center items-center md:col-span-6 lg:col-span-5">
+						<div class="text-center items-center md:col-span-7">
 							<h1
 								class="text-4xl md:text-5xl font-bold dark:text-stone-200 text-slate-700"
 								x-intersect="$el.classList.add('fadeInUp')"
@@ -113,7 +112,7 @@
 								Hi, I'm Teal.
 							</h1>
 							<p
-								class="border-l-4 border-slate-700 dark:border-stone-200 mt-8 pl-6 text-2xl leading-10 text-left opacity-0"
+								class="border-l-4 border-slate-700 dark:border-stone-200 mt-8 pl-6 text-2xl xl:text-3xl leading-10 text-left opacity-0"
 								x-intersect="
 								setTimeout(() => {
 									$el.classList.add('fadeInUp', 'opacity-100')
@@ -125,9 +124,9 @@
 							</p>
 						</div>
 						<img
-							src="images/geom-16.png"
+							src="images/Ewer_Headshot.jpg"
 							alt="Photo of Teal"
-							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							class="mt-12 max-w-[20rem] md:col-span-5 m-auto rounded-full shadow-2xl border-4 border-slate-700"
 							x-intersect="$el.classList.add('scale')"
 						/>
 					</div>
@@ -173,9 +172,11 @@
 
 			<section
 				id="projects"
-				class="py-4 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
+				class="py-8 md:py-6 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
-				<div class="mt-0 md:mt-8 wrapper flex flex-col min-h-screen">
+				<div
+					class="mt-0 wrapper flex flex-col min-h-screen snap-end md:snap-stop"
+				>
 					<h2
 						class="text-3xl sm:text-4xl font-bold text-center text-slate-700"
 						x-intersect="$el.classList.add('fadeInUp')"
@@ -195,7 +196,7 @@
 								<img
 									class="object-contain object-center w-full h-auto max-w-s"
 									src="images/myLibrary.png"
-									alt="myLibrary home page"
+									alt="myLibrary Home Page"
 								/>
 							</a>
 							<div class="text-center px-6 py-3 bg-gray-900">
@@ -203,18 +204,14 @@
 							</div>
 							<div class="px-6 py-4">
 								<p
-									class="py-2 text-gray-700 dark:text-gray-400 flex items-center"
-									style="min-height: 7rem"
+									class="py-2 text-gray-700 dark:text-gray-400 flex items-center min-h-[7rem]"
 								>
 									A virtual bookshelf with full CRUD capabilities, utilizing
 									Google OAuth 2.0 and the Google Books API.
 								</p>
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
-									<p
-										class="px-2 text-sm flex items-center"
-										style="min-height: 4rem"
-									>
+									<p class="px-2 text-sm flex items-center min-h-[4rem]">
 										Node.js, Express, MongoDB, JavaScript, Bootstrap
 									</p>
 								</div>
@@ -287,18 +284,14 @@
 							</div>
 							<div class="px-6 py-4">
 								<p
-									class="py-2 text-gray-700 dark:text-gray-400 flex items-center"
-									style="min-height: 7rem"
+									class="py-2 text-gray-700 dark:text-gray-400 flex items-center min-h-[7rem]"
 								>
 									A card based memory game that tests user’s knowledge of
 									preflop poker charts, complete with animations and confetti!
 								</p>
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
-									<p
-										class="px-2 text-sm flex items-center"
-										style="min-height: 4rem"
-									>
+									<p class="px-2 text-sm flex items-center min-h-[4rem]">
 										HTML, CSS, JavaScript, Bulma
 									</p>
 								</div>
@@ -354,14 +347,14 @@
 							class="my-8 md:w-96 lg:mx-4 mx-auto max-w-sm overflow-hidden bg-white rounded-lg shadow-lg h-1/2 scaleUpOnHover"
 						>
 							<a
-								href="https://teals-library.herokuapp.com/"
+								href="https://mutant-games.herokuapp.com/"
 								target="_blank"
 								class="focus:border-none"
 							>
 								<img
 									class="object-contain object-center w-full h-auto max-w-s"
 									src="images/mutant-games.png"
-									alt="myLibrary home page"
+									alt="Mutant Games Home Page"
 								/>
 							</a>
 							<div class="text-center px-6 py-3 bg-gray-900">
@@ -371,16 +364,14 @@
 							</div>
 							<div class="px-6 py-4">
 								<p
-									class="py-2 text-gray-700 dark:text-gray-400 flex items-center"
-									style="min-height: 7rem"
+									class="py-2 text-gray-700 dark:text-gray-400 flex items-center min-h-[7rem]"
 								>
 									A full-stack MERN application for creating and joining video
 									game lobbies.
 								</p>
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
-									<p class="px-2 text-sm flex items-center"
-										style="min-height: 4rem">
+									<p class="px-2 text-sm flex items-center min-h-[4rem]">
 										Node.js, Express, MongoDB, JavaScript, Bootstrap
 									</p>
 								</div>
@@ -469,8 +460,8 @@
 									<tr class="p-4">
 										<td class="p-4 font-semibold rounded-bl-lg">Tools</td>
 										<td class="p-4 rounded-br-lg">
-											Express, Mongoose, Passport.js, Insomnia, Postman, Google
-											OAuth 2.0, Google Books API, Git, GitHub
+											Git, GitHub, Tailwind, Bootstrap, Bulma, Express, Mongoose, Passport.js, Insomnia,
+											Postman, Google OAuth 2.0, Google Books API
 										</td>
 									</tr>
 								</tbody>
@@ -491,32 +482,29 @@
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
-					<div class="md:grid md:grid-cols-12 md:items-center h-full">
-						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
-						>
-							<h2
-								class="text-3xl sm:text-4xl font-bold text-slate-700"
-								x-intersect="$el.classList.add('fadeInUp')"
-							>
-								Contact
-							</h2>
-							<p
-								class="mt-6 leading-10 text-xl text-left"
-								x-intersect="$el.classList.add('fadeInUp')"
-							>
-								A software engineer with a flair for elegance and precision
-								shaped by over a decade of experience as a symphony trumpet
-								player and military musician. I bring an enthusiasm for learning
-								and a determination for solving complex problems to any team.
-							</p>
-						</div>
+					<div class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse">
 						<img
 							src="images/geom-archiving.png"
 							alt="Analytics Illustration"
 							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
 							x-intersect="$el.classList.add('scale')"
 						/>
+						<div
+							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+						>
+							<h2
+								class="text-3xl sm:text-4xl font-bold text-slate-700"
+								x-intersect="$el.classList.add('fadeInRight')"
+							>
+								Contact
+							</h2>
+							<p
+								class="mt-6 leading-10 text-xl text-left"
+								x-intersect="$el.classList.add('fadeInRight')"
+							>
+								Links to where I'm disrupting spaces
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
