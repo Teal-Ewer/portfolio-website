@@ -15,6 +15,11 @@
 		<link rel="stylesheet" href="styles.css" />
 		<title>Teal W. Ewer | Developer</title>
 	</head>
+	<style>
+        [x-cloak] {
+            display: none;
+        }
+  </style>
 	<body
 		class="antialiased text-gray-800 min-w-[360px] dark:text-stone-200"
 		x-data="{ open: false }"
@@ -53,6 +58,7 @@
 					</div>
 				</div>
 				<div
+					x-cloak
 					class="items-center justify-between md:flex"
 					:class="open ? 'block' : 'hidden'"
 				>
@@ -95,7 +101,7 @@
 		</nav>
 
 		<main
-			class="relative overflow-y-scroll snap snap-y snap-mandatory overflow-hidden"
+			class="relative overflow-y-scroll snap-y snap-mandatory"
 			style="max-height: calc(100vh - 68px)"
 		>
 			<section
@@ -126,7 +132,7 @@
 						<img
 							src="images/Ewer_Headshot.jpg"
 							alt="Photo of Teal"
-							class="mt-12 max-w-[20rem] md:col-span-5 m-auto rounded-full shadow-2xl border-4 border-slate-700"
+							class="max-w-[20rem] md:col-span-5 mt-12 md:mt-16 lg:ml-8 m-auto rounded-full shadow-2xl border-4 border-slate-700"
 							x-intersect="$el.classList.add('scale')"
 						/>
 					</div>
@@ -152,13 +158,13 @@
 						>
 							<h2
 								class="text-3xl sm:text-4xl font-bold text-slate-700"
-								x-intersect="$el.classList.add('fadeInRight')"
+								x-intersect="$el.classList.add('fadeInUp')"
 							>
 								Who am I?
 							</h2>
 							<p
 								class="mt-6 leading-10 text-xl text-left"
-								x-intersect="$el.classList.add('fadeInRight')"
+								x-intersect="$el.classList.add('fadeInUp')"
 							>
 								A software engineer with a flair for elegance and precision
 								shaped by over a decade of experience as a symphony trumpet
@@ -460,8 +466,9 @@
 									<tr class="p-4">
 										<td class="p-4 font-semibold rounded-bl-lg">Tools</td>
 										<td class="p-4 rounded-br-lg">
-											Git, GitHub, Tailwind, Bootstrap, Bulma, Express, Mongoose, Passport.js, Insomnia,
-											Postman, Google OAuth 2.0, Google Books API
+											Git, GitHub, Tailwind, Bootstrap, Bulma, Express,
+											Mongoose, Passport.js, Insomnia, Postman, Google OAuth
+											2.0, Google Books API
 										</td>
 									</tr>
 								</tbody>
@@ -482,7 +489,9 @@
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
-					<div class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse">
+					<div
+						class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse"
+					>
 						<img
 							src="images/geom-archiving.png"
 							alt="Analytics Illustration"
@@ -494,15 +503,20 @@
 						>
 							<h2
 								class="text-3xl sm:text-4xl font-bold text-slate-700"
-								x-intersect="$el.classList.add('fadeInRight')"
+								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								Contact
+								Reach Out:
 							</h2>
 							<p
 								class="mt-6 leading-10 text-xl text-left"
-								x-intersect="$el.classList.add('fadeInRight')"
+								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								Links to where I'm disrupting spaces
+								<ul>
+									<li>LinkedIn</li>
+									<li>LinkedIn</li>
+									<li>LinkedIn</li>
+									<li>LinkedIn</li>
+								</ul>
 							</p>
 						</div>
 					</div>

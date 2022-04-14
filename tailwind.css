@@ -6,15 +6,6 @@
 	.wrapper {
 		@apply max-w-6xl mx-auto my-auto;
 	}
-	.btn {
-		@apply inline-block bg-primary text-white rounded-full font-semibold;
-	}
-	.btn-md {
-		@apply px-6 py-2;
-	}
-	.btn-lg {
-		@apply px-9 py-3;
-	}
 }
 
 @layer utilities {
@@ -57,19 +48,6 @@
 	.fadeInLeft {
 		animation: fadeInLeft 1.25s cubic-bezier(0, 0, 0.2, 1);
 	}
-	@keyframes fadeInRight {
-		from {
-			opacity: 0;
-			transform: translateX(25%);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0)
-		}
-	}
-	.fadeInRight {
-		animation: fadeInRight 1.25s cubic-bezier(0, 0, 0.2, 1);
-	}
 	@keyframes scale {
 		from {
 			opacity: 0;
@@ -82,21 +60,6 @@
 	}
 	.scale {
 		animation: scale 1.25s cubic-bezier(0, 0, 0.2, 1);
-	}
-	.snap {
-		scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
-	}
-	.snap-y {
-		--scroll-snap-direction: y;
-	}
-	.snap-mandatory {
-		--scroll-snap-constraint: mandatory;
-	}
-	.snap-start {
-		scroll-snap-align: start;
-	}
-	.snap-end {
-		scroll-snap-align: end;
 	}
 	.snap-stop {
 		scroll-snap-align: none;
@@ -111,7 +74,7 @@
 		transform: scale(1.025); 
 	}
 	.scaleUpOnHover2 { 
-		transition: all .25s ease-in-out; 
+		transition: all .15s ease-in-out; 
 	}
 	.scaleUpOnHover2:hover { 
 		transform: scale(1.125); 

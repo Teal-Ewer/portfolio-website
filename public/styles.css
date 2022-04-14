@@ -642,11 +642,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .rounded-br-lg {
   border-bottom-right-radius: 0.5rem;
 }
-.border-2 {
-  border-width: 2px;
-}
 .border-4 {
   border-width: 4px;
+}
+.border-2 {
+  border-width: 2px;
 }
 .border-l-4 {
   border-left-width: 4px;
@@ -873,6 +873,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 			transform: translateY(0);
 		}
 	}
+.fadeInUpHalf {
+		-webkit-animation: fadeInUpHalf 1.25s cubic-bezier(0, 0, 0.2, 1);
+		        animation: fadeInUpHalf 1.25s cubic-bezier(0, 0, 0.2, 1);
+	}
 @-webkit-keyframes fadeInLeft {
 		from {
 			opacity: 0;
@@ -896,30 +900,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .fadeInLeft {
 		-webkit-animation: fadeInLeft 1.25s cubic-bezier(0, 0, 0.2, 1);
 		        animation: fadeInLeft 1.25s cubic-bezier(0, 0, 0.2, 1);
-	}
-@-webkit-keyframes fadeInRight {
-		from {
-			opacity: 0;
-			transform: translateX(25%);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0)
-		}
-	}
-@keyframes fadeInRight {
-		from {
-			opacity: 0;
-			transform: translateX(25%);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0)
-		}
-	}
-.fadeInRight {
-		-webkit-animation: fadeInRight 1.25s cubic-bezier(0, 0, 0.2, 1);
-		        animation: fadeInRight 1.25s cubic-bezier(0, 0, 0.2, 1);
 	}
 @-webkit-keyframes scale {
 		from {
@@ -945,22 +925,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 		-webkit-animation: scale 1.25s cubic-bezier(0, 0, 0.2, 1);
 		        animation: scale 1.25s cubic-bezier(0, 0, 0.2, 1);
 	}
-.snap {
-		-ms-scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
-		    scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);
-	}
-.snap-y {
-		--scroll-snap-direction: y;
-	}
-.snap-mandatory {
-		--scroll-snap-constraint: mandatory;
-	}
-.snap-start {
-		scroll-snap-align: start;
-	}
-.snap-end {
-		scroll-snap-align: end;
-	}
 .scroll-padding {
 		scroll-padding: 50px;
 	}
@@ -971,7 +935,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 		transform: scale(1.025); 
 	}
 .scaleUpOnHover2 { 
-		transition: all .25s ease-in-out; 
+		transition: all .15s ease-in-out; 
 	}
 .scaleUpOnHover2:hover { 
 		transform: scale(1.125); 
@@ -1039,6 +1003,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mt-8 {
     margin-top: 2rem;
+  }
+
+  .md\:mt-16 {
+    margin-top: 4rem;
   }
 
   .md\:ml-auto {
@@ -1126,6 +1094,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   .lg\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+
+  .lg\:ml-8 {
+    margin-left: 2rem;
   }
 
   .lg\:flex-row {
