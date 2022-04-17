@@ -12,14 +12,18 @@
 			defer
 			src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
 		></script>
+		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+		<link rel="manifest" href="favicon/site.webmanifest" />
 		<link rel="stylesheet" href="styles.css" />
 		<title>Teal Ewer | Developer</title>
 	</head>
 	<style>
 		[x-cloak] {
-				display: none;
+			display: none;
 		}
-  </style>
+	</style>
 	<body
 		class="antialiased text-gray-800 min-w-[360px] dark:text-stone-200"
 		x-data="{ open: false }"
@@ -34,12 +38,12 @@
 			>
 				<div class="flex items-center justify-between">
 					<div
-					@click="document.querySelector('#home').scrollIntoView({ 
+						@click="document.querySelector('#home').scrollIntoView({ 
 						behavior: 'smooth' 
 					})"
-					class="text-2xl md:text-3xl transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300 font-mono"
+						class="text-2xl md:text-3xl transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300 font-mono"
 					>
-					&lt; Teal /&gt; 
+						&lt; Teal /&gt;
 					</div>
 					<div class="flex md:hidden">
 						<button
@@ -118,35 +122,35 @@
 								Hi, I'm Teal.
 							</h1>
 							<p
-								class="border-l-4 border-slate-700 dark:border-stone-200 mt-8 pl-6 text-2xl xl:text-3xl text-left opacity-0"
+								class="border-l-4 border-slate-700 mt-8 pl-6 text-xl lg:text-2xl text-left opacity-0"
 								x-intersect="
 								setTimeout(() => {
 									$el.classList.add('fadeInUp', 'opacity-100')
 								}, 2250)
 								"
 							>
-								Yes, like the color! I'm a DC-based software engineer, hammock-camping enthusiast, and USMC Veteran. 
+								Yes, like the color! I'm a DC-based software engineer,
+								hammock-camping enthusiast, and USMC Veteran.
+							</p>
+							<p
+								class="border-l-4 border-slate-700 mt-8 pl-6 text-xl lg:text-2xl text-left opacity-0"
+								x-intersect="
+								setTimeout(() => {
+									$el.classList.add('fadeInUp', 'opacity-100')
+								}, 2350)
+								"
+							>
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi tenetur ipsa quos est fugiat.
 							</p>
 						</div>
 						<img
 							src="images/Ewer_Headshot.jpg"
 							alt="Photo of Teal"
-							class="max-w-[20rem] md:col-span-5 mt-12 md:mt-16 rounded-full shadow-2xl border-4 border-slate-700 m-auto md:mx-4"
+							class="max-w-[20rem] md:col-span-5 mt-12 md:mt-24 rounded-full shadow-2xl border-4 border-slate-700 m-auto md:mx-4"
 							x-intersect="$el.classList.add('scale')"
 						/>
 					</div>
 				</div>
-				<!-- <div class="max-w-4xl px-8 py-4 mx-auto mt-16 bg-white rounded-lg shadow-lg dark:bg-gray-800">
-        	<div class="flex justify-center -mt-12 md:justify-end">
-            <img class="max-w-[20rem] mt-12 md:mt-16 lg:ml-8 m-auto rounded-full shadow-2xl border-4 border-slate-700" alt="Teal Headshot" src="images/Ewer_Headshot.jpg">
-					</div>
-       		<h2 class="text-4xl md:text-5xl font-bold dark:text-stone-200 text-slate-700">Hi! I'm Teal</h2>
-        	<p class="mt-2 text-gray-600 dark:text-gray-200">Yes, like the color! I'm a DC-based software engineer, frenchie
-								dad, and USMC Veteran.</p>
-        	<div class="flex justify-end mt-4">
-            <a href="#" class="text-xl font-medium text-blue-500 dark:text-blue-300">John Doe</a>
-        	</div>
-    		</div> -->
 			</section>
 
 			<section
@@ -191,7 +195,7 @@
 				class="py-8 md:py-6 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
 			>
 				<div
-					class="mt-0 wrapper flex flex-col min-h-screen snap-end md:snap-stop"
+					class="mt-0 wrapper flex flex-col min-h-screen snap-end lg:snap-stop"
 				>
 					<h2
 						class="text-3xl sm:text-4xl font-bold text-center text-slate-700"
@@ -228,7 +232,7 @@
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
 									<p class="px-2 text-sm flex items-center min-h-[4rem]">
-										Node.js, Express, MongoDB, JavaScript, Bootstrap
+										Node.js, Express, MongoDB, Mongoose, JavaScript, Bootstrap
 									</p>
 								</div>
 								<div
@@ -456,7 +460,6 @@
 							</h2>
 							<table
 								class="mt-4 table-fixed text-left p-1 border-2 border-gray-700 rounded-xl border-separate shadow-xl"
-								x-intersect="$el.classList.add('fadeInUpHalf')"
 							>
 								<tbody class="p-4 rounded-lg" style="background-color: #e0e3e3">
 									<tr class="p-4">
@@ -499,47 +502,68 @@
 				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding flex flex-col min-h-full justify-between"
 				style="min-height: calc(100vh - 50px)"
 			>
-					<div 
-						class="mt-0 md:mt-8 wrapper flex justify-center"
+				<div class="mt-0 md:mt-8 wrapper flex justify-center">
+					<div
+						class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse"
 					>
+						<img
+							src="images/geom-archiving.png"
+							alt="Analytics Illustration"
+							class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							x-intersect="$el.classList.add('scale')"
+						/>
 						<div
-							class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse"
+							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
 						>
-							<img
-								src="images/geom-archiving.png"
-								alt="Analytics Illustration"
-								class="mt-6 md:mt-0 md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
-								x-intersect="$el.classList.add('scale')"
-							/>
-							<div
-								class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+							<h2
+								class="text-3xl sm:text-4xl font-bold text-slate-700 mb-4"
+								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								<h2
-									class="text-3xl sm:text-4xl font-bold text-slate-700"
-									x-intersect="$el.classList.add('fadeInUp')"
-								>
-									Reach Out
-								</h2>
-								<p
-									class="mt-6 leading-10 text-xl text-left"
-									x-intersect="$el.classList.add('fadeInUp')"
-								>
-									<ul class="list-none">
-										<li>Email me at <a href="mailto:tealewer@gmail.com">tealewer@gmail.com</a></li>
-										<li>LinkedIn</li>
-										<li>LinkedIn</li>
-										<li>LinkedIn</li>
-									</ul>
-								</p>
-							</div>
+								Reach Out
+							</h2>
+							<ul class="list-none text-xl">
+								<li>I'd love to hear from you.</li>
+								<li class="text-xl">
+									Email me at
+									<a href="mailto:tealewer@gmail.com" class="text-blue-800"
+										>tealewer@gmail.com</a
+									>
+								</li>
+								<li>LinkedIn</li>
+								<li>
+									<button
+										class="flex items-center justify-center w-full px-2 py-1 text-white transition-colors duration-200 transform bg-slate-700 rounded-md focus:outline-none sm:w-auto sm:mx-1 hover:bg-slate-600 focus:bg-slate-500 focus:ring focus:ring-slate-300 focus:ring-opacity-40"
+									>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											class="w-5 h-5 mx-1"
+											fill="none"
+											viewBox="0 0 24 24"
+											stroke="currentColor"
+										>
+											<path
+												stroke-linecap="round"
+												stroke-linejoin="round"
+												stroke-width="2"
+												d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+											/>
+										</svg>
+										<span class="mx-1"> Resume </span>
+									</button>
+								</li>
+								<li>LinkedIn</li>
+							</ul>
 						</div>
 					</div>
-					<footer class="min-w-full mx-auto text-slate-800 self-end">
-						<ul class="flex flex-col md:flex-row items-center justify-center list-none">
-							<li class="mx-4">&copy; 2022 Teal W Ewer</li>
-							<li class="mx-4">Built with Alpine.js & Tailwind CSS</li>
-						</ul>
-					</footer>
+				</div>
+				<footer class="min-w-full mx-auto text-slate-800 self-end">
+					<ul
+						class="flex flex-col md:flex-row items-center justify-center list-none"
+					>
+						<li class="mx-8">&copy; 2022 Teal W. Ewer</li>
+						<li class="mx-8">Built with Alpine.js & Tailwind CSS</li>
+					</ul>
+				</footer>
 			</section>
 		</main>
 	</body>
