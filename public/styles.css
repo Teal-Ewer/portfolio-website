@@ -504,11 +504,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 2rem;
   margin-right: 2rem;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .mt-0 {
   margin-top: 0px;
 }
-.mt-8 {
-  margin-top: 2rem;
+.mt-16 {
+  margin-top: 4rem;
 }
 .mt-12 {
   margin-top: 3rem;
@@ -521,6 +525,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mb-4 {
   margin-bottom: 1rem;
+}
+.mt-8 {
+  margin-top: 2rem;
 }
 .block {
   display: block;
@@ -593,16 +600,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-.snap-y {
-  -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
-      scroll-snap-type: y var(--tw-scroll-snap-strictness);
-}
-.snap-mandatory {
-  --tw-scroll-snap-strictness: mandatory;
-}
-.snap-proximity {
-  --tw-scroll-snap-strictness: proximity;
 }
 .snap-start {
   scroll-snap-align: start;
@@ -776,10 +773,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 2.25rem;
   line-height: 2.5rem;
 }
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
@@ -791,6 +784,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1016,15 +1013,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 @media (min-width: 640px) {
 
-  .sm\:mx-1 {
-    margin-left: 0.25rem;
-    margin-right: 0.25rem;
-  }
-
-  .sm\:w-auto {
-    width: auto;
-  }
-
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -1048,6 +1036,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:col-span-6 {
     grid-column: span 6 / span 6;
+  }
+
+  .md\:m-0 {
+    margin: 0px;
   }
 
   .md\:mx-4 {
@@ -1142,6 +1134,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     grid-column: span 5 / span 5;
   }
 
+  .lg\:m-0 {
+    margin: 0px;
+  }
+
   .lg\:mx-4 {
     margin-left: 1rem;
     margin-right: 1rem;
@@ -1151,9 +1147,13 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 
-  .lg\:text-2xl {
-    font-size: 1.5rem;
-    line-height: 2rem;
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:leading-\[3\.5rem\] {
+    line-height: 3.5rem;
   }
 	.lg\:snap-stop {
 		scroll-snap-align: none;
