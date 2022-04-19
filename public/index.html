@@ -12,9 +12,23 @@
 			defer
 			src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
 		></script>
-		<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="favicon/favicon-16x16.png"
+		/>
 		<link rel="manifest" href="favicon/site.webmanifest" />
 		<link rel="stylesheet" href="styles.css" />
 		<title>Teal Ewer | Developer</title>
@@ -105,7 +119,7 @@
 		</nav>
 
 		<main
-			class="relative overflow-y-scroll snap-y snap-mandatory"
+			class="relative overflow-y-scroll"
 			style="max-height: calc(100vh - 50px)"
 		>
 			<section
@@ -121,27 +135,25 @@
 							>
 								Hi, I'm Teal.
 							</h1>
-							<p
-								class="border-l-4 border-slate-700 mt-8 pl-6 text-xl lg:text-2xl text-left opacity-0"
+							<div
+								class="border-l-4 border-slate-700 opacity-0"
 								x-intersect="
 								setTimeout(() => {
 									$el.classList.add('fadeInUp', 'opacity-100')
 								}, 2250)
-								"
+							"
 							>
-								Yes, like the color! I'm a DC-based software engineer,
-								hammock-camping enthusiast, and USMC Veteran.
-							</p>
-							<p
-								class="border-l-4 border-slate-700 mt-8 pl-6 text-xl lg:text-2xl text-left opacity-0"
-								x-intersect="
-								setTimeout(() => {
-									$el.classList.add('fadeInUp', 'opacity-100')
-								}, 2350)
-								"
-							>
-								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus excepturi tenetur ipsa quos est fugiat.
-							</p>
+								<p class="mt-8 pl-6 text-xl lg:text-2xl text-left">
+									Yes, like the color! I'm a DC-based software engineer,
+									hammock-camping enthusiast, and USMC Veteran.
+								</p>
+								<p
+									class="mt-8 pl-6 text-xl lg:text-2xl text-left"
+								>
+									Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+									Possimus excepturi tenetur ipsa quos est fugiat.
+								</p>
+							</div>
 						</div>
 						<img
 							src="images/Ewer_Headshot.jpg"
@@ -180,10 +192,11 @@
 								class="mt-6 leading-10 text-xl text-left"
 								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								A software engineer with a flair for elegance and precision
-								shaped by over a decade of experience as a symphony trumpet
-								player and military musician. I bring an enthusiasm for learning
-								and a determination for solving complex problems to any team.
+								A full-stack software engineer with a flair for elegance and
+								precision shaped by over a decade of experience as a symphony
+								trumpet player and military musician. I bring an enthusiasm for
+								learning and a determination for solving complex problems to any
+								team.
 							</p>
 						</div>
 					</div>
@@ -232,7 +245,7 @@
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
 									<p class="px-2 text-sm flex items-center min-h-[4rem]">
-										Node.js, Express, MongoDB, Mongoose, JavaScript, Bootstrap
+										MongoDB, Express, Node.js, Mongoose, JavaScript, Bootstrap
 									</p>
 								</div>
 								<div
@@ -392,7 +405,8 @@
 								<div class="mt-4 text-gray-700 dark:text-gray-200">
 									<h3 class="font-semibold px-2 text-sm">Built using:</h3>
 									<p class="px-2 text-sm flex items-center min-h-[4rem]">
-										Node.js, Express, MongoDB, JavaScript, Bootstrap
+										MongoDB, Express.js, React, Node.js, Mongoose, JavaScript,
+										Bootstrap
 									</p>
 								</div>
 								<div
