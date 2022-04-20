@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			defer
+			src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+		></script>
+		<script
+			defer
+			src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+		></script>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="favicon/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="favicon/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="favicon/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="favicon/site.webmanifest" />
+		<link rel="stylesheet" href="styles.css" />
+		<title>Teal Ewer | Developer</title>
+	</head>
+	<style>
+		[x-cloak] {
+			display: none;
+		}
+	</style>
+	<body
+		class="antialiased text-gray-800 min-w-[360px] dark:text-stone-200"
+		x-data="{ open: false }"
+	>
+		<nav
+			@click.outside="open = false"
+			class="shadow sticky top-0 z-50 bg-slate-800 text-neutral-100"
+			style="min-height: 50px"
+		>
+			<div
+				class="container px-6 py-2 mx-auto md:flex md:justify-between md:items-center"
+			>
+				<div class="flex items-center justify-between">
+					<div
+						class="text-2xl md:text-3xl transition-colors duration-200 transform hover:cursor-pointer hover:text-neutral-300 font-mono"
+					>
+						<a href="/public/index.html">&lt; Teal /&gt;</a>
+					</div>
+					<div class="flex md:hidden">
+						<button
+							@click="open = !open"
+							type="button"
+							class="text-neutral-100 hover:text-neutral-300 focus:outline-none focus:text-neutral-200 transition-colors"
+							aria-label="toggle menu"
+						>
+							<svg viewBox="0 0 24 24" class="w-6 h-6 fill-current">
+								<path
+									fill-rule="evenodd"
+									d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+								></path>
+							</svg>
+						</button>
+					</div>
+				</div>
+				<div
+					x-cloak
+					class="items-center justify-between md:flex"
+					:class="open ? 'block' : 'hidden'"
+				>
+					<div
+						class="flex flex-row justify-between pt-6 md:py-0 md:flex md:mx-4 md:flex-row md:items-center"
+					>
+						<a
+							href="https://www.linkedin.com/in/teal-ewer/"
+							class="mx-4 w-8 scaleUpOnHover2"
+							target="_blank"
+							@click="open = false"
+							><img
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/linkedin.png"
+						/></a>
+						<a
+							href="https://github.com/Teal-Ewer"
+							class="mx-4 w-8 scaleUpOnHover2"
+							target="_blank"
+							@click="open = false"
+							><img
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/github.png"
+						/></a>
+						<a
+							href="mailto:tealewer@gmail.com"
+							class="mx-4 w-8 scaleUpOnHover2"
+							@click="open = false"
+							><img
+								src="https://img.icons8.com/ios-glyphs/90/f5f5f5/new-post.png"
+						/></a>
+						<a
+							href="./resume/Teal_Ewer_Resume.pdf"
+							class="flex items-center justify-center px-2 py-1 text-neutral-100 text-lg transition-colors duration-200 transform bg-slate-800 rounded-md hover:bg-slate-900 hover:text-neutral-300 focus:text-neutral-300 focus:outline-none focus:bg-slate-900"
+							@click="open = false"
+							download="Teal_Ewer_Resume"
+							><svg
+								xmlns="http://www.w3.org/2000/svg"
+								class="w-5 h-5 mx-1"
+								fill="none"
+								viewBox="0 0 24 24"
+								stroke="currentColor"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"
+								/></svg
+							><span>Resume</span></a
+						>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<main
+			class="relative overflow-y-scroll"
+			style="max-height: calc(100vh - 50px)"
+		>
+			<section
+				id="thank-you"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
+			>
+				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
+					<div
+						class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse"
+					>
+						<img
+							src="images/waffle_party.png"
+							alt="Eye Searching Illustration"
+							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							x-intersect="$el.classList.add('scale')"
+						/>
+						<div
+							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+							x-intersect="$el.classList.add('fadeInUp')"
+						>
+							<h2 class="text-3xl sm:text-4xl font-bold text-slate-700">
+								Thanks for the message!
+							</h2>
+							<p
+								class="mt-6 mb-8 leading-8 md:leading-[2.5rem] text-xl md:text-2xl"
+							>
+								I'll be in touch with you soon.
+							</p>
+							<a
+								class="px-4 py-2 text-neutral-100 transition-colors duration-200 transform bg-slate-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600"
+								href="/public"
+							>
+								Go Back
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
