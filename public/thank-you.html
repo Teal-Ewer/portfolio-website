@@ -142,25 +142,25 @@
 		</nav>
 
 		<main
-			class="relative overflow-y-scroll"
-			style="max-height: calc(100vh - 50px)"
+			class="relative"
 		>
 			<section
 				id="thank-you"
-				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding"
+				class="py-8 px-4 sm:px-6 bg-slate-100 snap-start scroll-padding flex flex-col min-h-full justify-between"
+				style="min-height: calc(100vh - 50px)"
 			>
-				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-screen">
+				<div class="mt-0 md:mt-8 wrapper">
 					<div
 						class="md:grid md:grid-cols-12 md:items-center h-full flex flex-col-reverse"
 					>
 						<img
 							src="images/waffle_party.png"
 							alt="Eye Searching Illustration"
-							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7"
+							class="md:max-h-[36rem] md:col-span-6 md:ml-auto lg:col-span-7 py-8 md:py-0"
 							x-intersect="$el.classList.add('scale')"
 						/>
 						<div
-							class="text-center items-center md:col-span-6 lg:col-span-5 md:text-left"
+							class="px-10 md:pl-0 text-left items-center md:col-span-6 lg:col-span-5"
 							x-intersect="$el.classList.add('fadeInUp')"
 						>
 							<h2 class="text-3xl sm:text-4xl font-bold text-slate-700">
@@ -180,6 +180,14 @@
 						</div>
 					</div>
 				</div>
+				<footer class="min-w-full mx-auto text-slate-800 self-end mt-8">
+					<ul
+						class="flex flex-col md:flex-row items-center justify-center list-none"
+					>
+						<li class="mx-8">&copy; 2022 Teal W. Ewer</li>
+						<li class="mx-8">Built with Alpine.js & Tailwind CSS</li>
+					</ul>
+				</footer>
 			</section>
 		</main>
 	</body>
