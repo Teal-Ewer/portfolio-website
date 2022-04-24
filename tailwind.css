@@ -58,12 +58,12 @@
 		transition: all .25s ease-in-out; 
 	}
 	.scaleUpOnHover:hover { 
-		transform: scale(1.025); 
+		transform: scale(1.0125); 
 	}
 	.scaleUpOnHover2 { 
-		transition: all .15s ease-in-out; 
+		transition: all .25s ease-in-out; 
 	}
 	.scaleUpOnHover2:hover { 
-		transform: scale(1.125); 
+		transform: scale(1.05); 
 	}
 }

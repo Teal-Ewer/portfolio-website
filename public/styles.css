@@ -778,20 +778,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .pl-6 {
   padding-left: 1.5rem;
 }
-.pl-8 {
-  padding-left: 2rem;
-}
-.pl-10 {
-  padding-left: 2.5rem;
-}
 .text-left {
   text-align: left;
 }
 .text-center {
   text-align: center;
-}
-.align-top {
-  vertical-align: top;
 }
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -977,27 +968,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 		transition: all .25s ease-in-out; 
 	}
 .scaleUpOnHover:hover { 
-		transform: scale(1.025); 
+		transform: scale(1.0125); 
 	}
 .scaleUpOnHover2 { 
-		transition: all .15s ease-in-out; 
+		transition: all .25s ease-in-out; 
 	}
 .scaleUpOnHover2:hover { 
-		transform: scale(1.125); 
+		transform: scale(1.05); 
 	}
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
 }
 
-.hover\:bg-slate-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-slate-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-900:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .hover\:text-neutral-300:hover {
@@ -1019,24 +1010,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(96 165 250 / var(--tw-border-opacity));
 }
 
-.focus\:bg-slate-900:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
-}
-
 .focus\:bg-slate-800:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
 }
 
+.focus\:bg-slate-900:focus {
+  --tw-bg-opacity: 1;
+  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
+}
+
 .focus\:text-neutral-200:focus {
   --tw-text-opacity: 1;
   color: rgb(229 229 229 / var(--tw-text-opacity));
-}
-
-.focus\:text-neutral-300:focus {
-  --tw-text-opacity: 1;
-  color: rgb(212 212 212 / var(--tw-text-opacity));
 }
 
 .focus\:outline-none:focus {
@@ -1141,10 +1127,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:items-start {
-    align-items: flex-start;
   }
 
   .md\:items-center {
