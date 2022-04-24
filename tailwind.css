@@ -66,4 +66,10 @@
 	.scaleUpOnHover2:hover { 
 		transform: scale(1.05); 
 	}
+	.fullMain {
+		max-height: calc(100vh - 50px)
+	}
+	.fullSection {
+		min-height: calc(100vh - 50px);
+	}
 }

@@ -561,17 +561,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-40 {
   height: 10rem;
 }
-.min-h-screen {
-  min-height: 100vh;
+.min-h-full {
+  min-height: 100%;
 }
 .min-h-\[7rem\] {
   min-height: 7rem;
 }
 .min-h-\[4rem\] {
   min-height: 4rem;
-}
-.min-h-full {
-  min-height: 100%;
 }
 .w-6 {
   width: 1.5rem;
@@ -976,6 +973,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .scaleUpOnHover2:hover { 
 		transform: scale(1.05); 
 	}
+.fullMain {
+		max-height: calc(100vh - 50px)
+	}
+.fullSection {
+		min-height: calc(100vh - 50px);
+	}
 
 .hover\:cursor-pointer:hover {
   cursor: pointer;
@@ -984,11 +987,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:bg-slate-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-slate-900:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .hover\:text-neutral-300:hover {
@@ -1013,11 +1011,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:bg-slate-800:focus {
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
-}
-
-.focus\:bg-slate-900:focus {
-  --tw-bg-opacity: 1;
-  background-color: rgb(15 23 42 / var(--tw-bg-opacity));
 }
 
 .focus\:text-neutral-200:focus {
