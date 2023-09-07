@@ -143,7 +143,7 @@
 			</div>
 		</nav>
 
-		<main class="relative overflow-y-scroll fullMain" x-cloak>
+		<main class="relative mainSection" x-cloak>
 			<section id="home" class="py-8 px-4 sm:px-6 bg-slate-100 fullSection">
 				<div class="mt-0 md:mt-8 wrapper flex justify-center min-h-full">
 					<div class="md:grid md:grid-cols-12 md:items-center h-full">
@@ -165,7 +165,7 @@
 								<p
 									class="pl-6 text-2xl lg:text-3xl lg:leading-[3.5rem] leading-10 text-left"
 								>
-									Yes, like the color! I'm a DC-based software engineer,
+									Yes, like the color! I'm a DC-based software developer,
 									hammock-camping enthusiast, and USMC Veteran.
 								</p>
 							</div>
@@ -204,7 +204,7 @@
 								class="mt-6 leading-8 md:leading-[2.5rem] text-xl md:text-2xl text-left"
 								x-intersect="$el.classList.add('fadeInUp')"
 							>
-								A full-stack software engineer with a flair for elegance and
+								A full-stack software developer with a flair for elegance and
 								precision shaped by over a decade of experience as a symphony
 								trumpet player and military musician. I bring an enthusiasm for
 								learning and a determination for solving complex problems to any
@@ -606,11 +606,16 @@
 						</div>
 					</div>
 				</div>
-				<footer class="min-w-full mx-auto text-slate-800 self-end mt-8">
+				<footer
+					class="min-w-full mx-auto text-slate-800 self-end mt-8"
+					x-data="{ year: (new Date()).getFullYear()}"
+				>
 					<ul
 						class="flex flex-col md:flex-row items-center justify-center list-none"
 					>
-						<li class="mx-8">&copy; 2022 Teal W. Ewer</li>
+						<li class="mx-8">
+							&copy; <span x-text="year"></span> Teal W. Ewer
+						</li>
 						<li class="mx-8">Built with Alpine.js & Tailwind CSS</li>
 					</ul>
 				</footer>
